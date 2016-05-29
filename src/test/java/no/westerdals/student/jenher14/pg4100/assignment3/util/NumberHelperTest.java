@@ -1,13 +1,14 @@
+/*
+ * Herman Jensen
+ * PG4100
+ * Innlevering 3
+ */
+
 package no.westerdals.student.jenher14.pg4100.assignment3.util;
 
-import org.junit.Assert;
 import org.junit.Test;
-
 import static org.junit.Assert.*;
 
-/**
- * Created by Herman on 17.04.2016.
- */
 public class NumberHelperTest {
 
     @Test

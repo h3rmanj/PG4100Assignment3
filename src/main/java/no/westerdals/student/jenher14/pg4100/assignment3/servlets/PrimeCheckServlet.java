@@ -1,13 +1,17 @@
+/*
+ * Herman Jensen
+ * PG4100
+ * Innlevering 3
+ */
+
 package no.westerdals.student.jenher14.pg4100.assignment3.servlets;
 
 import no.westerdals.student.jenher14.pg4100.assignment3.util.NumberHelper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
-import java.util.Arrays;
 
 @WebServlet(name="PrimeCheck", urlPatterns="/PrimeCheck")
 public class PrimeCheckServlet extends HttpServlet
@@ -50,6 +54,6 @@ public class PrimeCheckServlet extends HttpServlet
         RequestDispatcher view = req.getRequestDispatcher("PrimeCheck.jsp");
 
         try { view.forward(req, resp); }
-        catch (Exception e) { errorLogger.error(e.getClass().getName() + " \n" + Arrays.toString(e.getStackTrace())); }
+        catch (Exception e) { errorLogger.error("Noe gikk galt i PrimeCheckServlet.doGet()", e); }
     }
 }
